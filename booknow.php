@@ -221,6 +221,7 @@
 
             .page-header h1 {
                 font-size: 2rem;
+                padding: 3rem 0 0 0;
             }
 
             .page-header p {
@@ -239,6 +240,7 @@
                 padding: 1.5rem 1.5rem;
             }
         }
+
 
         /* Back button alignment inside card header */
         .card-header-custom .back-btn {

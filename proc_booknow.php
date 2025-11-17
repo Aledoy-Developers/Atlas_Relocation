@@ -90,7 +90,7 @@ Submitted On: " . date("Y-m-d H:i:s") . "
 // =====================================
 // SEND TO ADMIN
 // =====================================
-$admin_email = "obitobenna6@gmail.com";
+$admin_email = "";
 $mail->addAddress($admin_email);
 
 // Allow replying to the user

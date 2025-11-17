@@ -6,13 +6,13 @@ require_once('PHPMailer/PHPMailerAutoload.php');
 
 $mail = new PHPMailer();
 $mail->isSMTP();
-$mail->Host       = 'mail.techbyfrancis.com';       // SMTP server
+$mail->Host       = '';       // SMTP server
 $mail->SMTPAuth   = true;
-$mail->Username   = 'portfolio@techbyfrancis.com';  // SMTP username
-$mail->Password   = 'TECHbyfrancis101$$';           // SMTP password
-$mail->SMTPSecure = 'ssl';
-$mail->Port       = 465;
-$mail->setFrom('portfolio@techbyfrancis.com', 'Atlas Relocation Services');
+$mail->Username   = '';  // SMTP username
+$mail->Password   = '';           // SMTP password
+$mail->SMTPSecure = '';
+$mail->Port       = ;
+$mail->setFrom('', 'Atlas Relocation Services');
 $mail->isHTML(true);
 
 // =====================================
@@ -54,7 +54,7 @@ Submitted On: " . date("Y-m-d H:i:s") . "
 // =====================================
 // SEND TO ADMIN
 // =====================================
-$admin_email = "obitobenna6@gmail.com";
+$admin_email = "";
 $mail->addAddress($admin_email);
 $mail->addReplyTo($email, $name);
 
