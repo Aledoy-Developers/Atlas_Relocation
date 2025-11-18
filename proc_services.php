@@ -4,16 +4,7 @@
 // =====================================
 require_once('PHPMailer/PHPMailerAutoload.php');
 
-$mail = new PHPMailer();
-$mail->isSMTP();
-$mail->Host       = '';       // SMTP server
-$mail->SMTPAuth   = true;
-$mail->Username   = '';  // SMTP username
-$mail->Password   = '';           // SMTP password
-$mail->SMTPSecure = '';
-$mail->Port       = ;
-$mail->setFrom('', 'Atlas Relocation Services');
-$mail->isHTML(true);
+include('smtp-setting.php');
 
 // =====================================
 // CHECK IF FORM IS POST
