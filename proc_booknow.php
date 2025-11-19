@@ -33,6 +33,9 @@ $destination      = $_POST['destination'] ?? '';
 $meetGreet        = $_POST['meetGreet'] ?? 'No';
 $numBags          = $_POST['numBags'] ?? '';
 
+$airportMeetGreet = $_POST['airportMeetGreet'] ?? 'No';
+$airportNumBags   = $_POST['airportNumBags'] ?? '';
+
 $country          = $_POST['country'] ?? '';
 $nature           = $_POST['nature'] ?? '';
 $inquiry          = $_POST['inquiry'] ?? '';
@@ -63,9 +66,9 @@ $message = "
 <strong>Time:</strong> $flightTime <br>
 <strong>Destination:</strong> $destination <br><br>
 
-<h3>Meet & Greet</h3>
-<strong>Meet & Greet:</strong> $meetGreet <br>
-<strong>No. of Bags:</strong> $numBags <br><br>
+<h3>Airport Meet & Greet</h3>
+<strong>Airport Meet & Greet:</strong> $airportMeetGreet <br>
+<strong>No. of Bags:</strong> $airportNumBags <br><br>
 
 <h3>Inquiry Information</h3>
 <strong>Country:</strong> $country <br>

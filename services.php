@@ -344,8 +344,7 @@
                                 </li>
                             </ul>
                         </div>
-
-                        <button class="btn btn-style mt-4">Book Now</button>
+                       <a href="booknow.php" class="btn btn-style mt-4">Book Now</a>
                     </div>
                 </div>
             </div>
@@ -453,8 +452,7 @@
                                         rely on</span></li>
                             </ul>
                         </div>
-
-                        <button class="btn btn-style mt-4">Book Now</button>
+                       <a href="booknow.php" class="btn btn-style mt-4">Book Now</a>
                     </div>
                 </div>
             </div>
@@ -563,8 +561,7 @@
                                         escorting</span></li>
                             </ul>
                         </div>
-
-                        <button class="btn btn-style mt-4">Book Now</button>
+                        <a href="booknow.php" class="btn btn-style mt-4">Book Now</a>
                     </div>
                 </div>
             </div>
@@ -615,7 +612,7 @@
                             <div class="col-md-6">
                                 <div class="feature-box">
                                     <div class="feature-icon">
-                                        <i class="fas fa-badge-check"></i>
+                                        <i class="fas fa-users"></i>
                                     </div>
                                     <div>
                                         <p class="mb-0">Priority assistance through immigration and customs</p>
@@ -683,13 +680,12 @@
                                         flights</span></li>
                             </ul>
                         </div>
-
-                        <button class="btn btn-style mt-4">Book Now</button>
+                      <a href="booknow.php" class="btn btn-style mt-4">Book Now</a>
                     </div>
                 </div>
             </div>
 
-            <!-- Service Detail 6: Excursion / Leisure -->
+            <!-- Service Detail 5: Excursion / Leisure -->
             <div class="service-detail-section" id="excursion-leisure">
                 <div class="row align-items-center">
 
@@ -707,7 +703,7 @@
 
                     <!-- Content Section -->
                     <div class="col-lg-6" data-aos="fade-left">
-                        <span class="detail-badge">SERVICE 06</span>
+                        <span class="detail-badge">SERVICE 05</span>
 
                         <h2 class="mb-3">Premium Excursions & Leisure Travel Experiences</h2>
 
@@ -804,10 +800,8 @@
                                         individuals</span></li>
                             </ul>
                         </div>
-
-                        <button class="btn btn-style mt-4">Book Now</button>
+                       <a href="booknow.php" class="btn btn-style mt-4">Book Now</a>
                     </div>
-
                 </div>
             </div>
 
@@ -908,8 +902,7 @@
                                         transition</span></li>
                             </ul>
                         </div>
-
-                        <button class="btn btn-style mt-4">Book Now</button>
+                       <a href="booknow.php" class="btn btn-style mt-4">Book Now</a>
                     </div>
                 </div>
             </div>
@@ -1024,8 +1017,7 @@
                                         assistance</span></li>
                             </ul>
                         </div>
-
-                        <button class="btn btn-style mt-4">Book Now</button>
+                       <a href="booknow.php" class="btn btn-style mt-4">Book Now</a>
                     </div>
                 </div>
             </div>
@@ -1139,8 +1131,7 @@
                                         needs</span></li>
                             </ul>
                         </div>
-
-                        <button class="btn btn-style mt-4">Book Now</button>
+                        <a href="booknow.php" class="btn btn-style mt-4">Book Now</a>
                     </div>
                 </div>
             </div>
@@ -1259,8 +1250,7 @@
                                         conduct</span></li>
                             </ul>
                         </div>
-
-                        <button class="btn btn-style mt-4">Book Now</button>
+                       <a href="booknow.php" class="btn btn-style mt-4">Book Now</a>
                     </div>
 
                 </div>
@@ -1280,7 +1270,7 @@
                         transfers and point-to-point services to corporate relocations and destination consulting, we
                         ensure safety, comfort, and efficiency for every client, every time.</p>
                 </div>
-                <button class="btn btn-light btn-contact">Contact Us</button>
+                <a href="contact.php" class="btn btn-light btn-contact">Contact us</a>
             </div>
         </div>
     </section>
@@ -1339,7 +1329,7 @@
     <div class="payment-container">
         <!-- Header -->
         <div class="payment-header">
-            <button class="btn btn-outline-primary back-btn" onclick="window.location.href='services.php'">
+            <button class="btn btn-outline-primary back-btn "  onclick="window.location.href='services.php'">
                 <i class="fas fa-arrow-left me-2"></i>Back
             </button>
             <h1>Atlas Relocation Services</h1>

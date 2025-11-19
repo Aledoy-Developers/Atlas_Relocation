@@ -301,7 +301,6 @@
             .payment-form-card {
                 padding: 25px;
             }
-
             .payment-header h1 {
                 font-size: 2rem;
             }
@@ -310,7 +309,6 @@
                 grid-template-columns: 1fr;
             }
         }
-
         /* Loading Spinner */
         .spinner-overlay {
             display: none;

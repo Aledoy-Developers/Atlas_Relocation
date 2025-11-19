@@ -122,10 +122,11 @@
         .input-icon i {
             position: absolute;
             left: 1rem;
-            top: 50%;
+            top:50%;
             transform: translateY(-50%);
             color: #6c757d;
             pointer-events: none;
+    
         }
 
         .input-icon .form-control,
@@ -513,11 +514,11 @@
                                 </div>
                             </div>
                             <div class="col-md-4">
-                                <label for="flightTime" class="form-label">Time of Arrival</label>
+                                <label for="flightTime" class="form-label" id="flightTimeLabel">Time</label>
                                 <div class="input-icon">
                                     <i class="bi bi-clock"></i>
                                     <input type="time" class="form-control" id="flightTime" name="flightTime">
-                                    <div class="invalid-feedback">Please select the time of arrival.</div>
+                                    <div class="invalid-feedback" id="flightTimeFeedback">Please select the time.</div>
                                 </div>
                             </div>
                         </div>
@@ -528,6 +529,30 @@
                                 <input type="text" class="form-control" id="destination"
                                name="destination"     placeholder="e.g., Lagos, Nigeria">
                                 <div class="invalid-feedback">Please enter the destination.</div>
+                            </div>
+                        </div>
+
+                        <!-- Airport Meet and Greet Section -->
+                        <div id="airportMeetGreetSection" class="mb-3" style="display: none;">
+                            <h6 class="mb-3">Additional Services for Airport Transfer</h6>
+                            <div class="mb-3">
+                                <label class="form-label">Do you want Meet and Greet Services?</label>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="airportMeetGreet" id="airportMeetGreetYes" value="yes">
+                                    <label class="form-check-label" for="airportMeetGreetYes">Yes</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="airportMeetGreet" id="airportMeetGreetNo" value="no" checked>
+                                    <label class="form-check-label" for="airportMeetGreetNo">No</label>
+                                </div>
+                            </div>
+                            <div class="mb-3">
+                                <label for="airportNumBags" class="form-label">How many bags do you have?</label>
+                                <div class="input-icon">
+                                    <i class="bi bi-bag"></i>
+                                    <input type="number" class="form-control" id="airportNumBags" min="0" placeholder="0" name="airportNumBags">
+                                    <div class="invalid-feedback">Please enter the number of bags.</div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -833,7 +858,49 @@
     <!-- Bootstrap Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 
-  
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const arrivalDepartureSelect = document.getElementById('arrivalDeparture');
+            const flightTimeLabel = document.getElementById('flightTimeLabel');
+            const flightTimeFeedback = document.getElementById('flightTimeFeedback');
+            const serviceSelect = document.getElementById('service');
+
+            function updateTimeLabel() {
+                const selectedValue = arrivalDepartureSelect.value;
+                if (selectedValue === 'arrival') {
+                    flightTimeLabel.textContent = 'Time of Arrival';
+                    flightTimeFeedback.textContent = 'Please select the time of arrival.';
+                } else if (selectedValue === 'departure') {
+                    flightTimeLabel.textContent = 'Time of Departure';
+                    flightTimeFeedback.textContent = 'Please select the time of departure.';
+                }
+            }
+
+            function updateServiceSections() {
+                const selectedService = serviceSelect.value;
+                if (selectedService === 'airport-shuttle') {
+                    document.getElementById('airportDetails').style.display = 'block';
+                    document.getElementById('airportMeetGreetSection').style.display = 'block';
+                } else {
+                    document.getElementById('airportDetails').style.display = 'none';
+                    document.getElementById('airportMeetGreetSection').style.display = 'none';
+                }
+                if (selectedService === 'protocol') {
+                    document.getElementById('meetGreetSection').style.display = 'block';
+                } else {
+                    document.getElementById('meetGreetSection').style.display = 'none';
+                }
+            }
+
+            arrivalDepartureSelect.addEventListener('change', updateTimeLabel);
+            serviceSelect.addEventListener('change', updateServiceSections);
+
+            // Initial checks
+            updateTimeLabel();
+            updateServiceSections();
+        });
+    </script>
+
 </body>
 
 </html>
